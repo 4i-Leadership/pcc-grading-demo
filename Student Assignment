@@ -1,10 +1,13 @@
 # **"STUDENT ASSIGNMENT"**
+
 # *"Student is asked to write a simple function"*
+
   "Please output your own US-based mobile phone number in string, consisting of:"
       "1. A 3-digit area code, followed by a dash (-)"
       "2. A 3-digit number, followed by a dash (-)"
       "3. A 4-digit number"
+      
   "Example of a valid phone number string: 999-333-4444"
   
-  **"Then output your First-name_Last-name"**
+  **"Then output your First-name_Last-name.py"**
   
