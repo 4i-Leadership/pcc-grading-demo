@@ -1,7 +1,29 @@
-Write assignment in GitHub
-Write Submission from GitHUB to transfer to Google Cloud
-Access file student submission
+# Write assignment in GitHub
+# Write Submission from GitHUB to transfer to Google Cloud
+
+# Access file student submission
+access csv file at 
+import file from https://console.cloud.google.com/storage/browser/_details/bucket-quickstart_pcc-grading-project-demo/Student%20Completed%20Assignment.csv;tab=live_object?project=pcc-grading-project-demo
+
+import urllib.request
+
+with urllib.request.urlopen('<some url>/') as response:
+
+html = response.read()
+
+urllib.request.urlopen(https://console.cloud.google.com/storage/browser/_details/bucket-quickstart_pcc-grading-project-demo/Student%20Completed%20Assignment.csv;tab=live_object?project=pcc-grading-project-demo)
+
+import urllib2
+
+data = urllib2.urlopen("https://console.cloud.google.com/storage/browser/_details/bucket-quickstart_pcc-grading-project-demo/Student%20Completed%20Assignment.csv;tab=live_object?project=pcc-grading-project-demo").read(20000) # read only 50 000 chars
+data = data.split("\n") # then split it into lines
+
+for line in data:
+    print line
+
 create a table name and phone number
+
+
 Send table to google cloud student submission with apend list
 Function # Validate phone number
 run loop phone comparison of string
