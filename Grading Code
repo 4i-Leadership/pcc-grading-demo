@@ -47,3 +47,46 @@ re.match(validate_phone_number_pattern, "+12223334444") # Returns Match object
 # Extract phone number from a string
 extract_phone_number_pattern = "\\[1-9]"-"[0-9]"-"{7,14}"
 re.findall(extract_phone_number_pattern, 'You can reach me out at 222-333-4444 and 666-777-8888') # returns ['222-333-4444', '666-777-8888']
+
+os.mkdir()
+
+# Python program to explain os.mkdir() method
+
+# importing os module
+import os
+
+# Directory
+directory = "GeeksforGeeks"
+
+# Parent Directory path
+parent_dir = "D:/Pycharm projects/"
+
+# Path
+path = os.path.join(parent_dir, directory)
+
+# Create the directory
+# 'GeeksForGeeks' in
+# '/home / User / Documents'
+os.mkdir(path)
+print("Directory '% s' created" % directory)
+
+# Directory
+directory = "Geeks"
+
+# Parent Directory path
+parent_dir = "D:/Pycharm projects"
+
+# mode
+mode = 0o666
+
+# Path
+path = os.path.join(parent_dir, directory)
+
+# Create the directory
+# 'GeeksForGeeks' in
+# '/home / User / Documents'
+# with mode 0o666
+os.mkdir(path, mode)
+print("Directory '% s' created" % directory)
+
+
