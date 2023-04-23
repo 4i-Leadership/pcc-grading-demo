@@ -1,0 +1,51 @@
+# **"STUDENT ASSIGNMENT"**
+# *"Student is asked to write a simple function"*
+  "Please output your own US-based mobile phone number in string, consisting of:"
+      "1. A 3-digit area code, followed by a dash (-)"
+      "2. A 3-digit number, followed by a dash (-)"
+      "3. A 4-digit number"
+  "Example of a valid phone number string: 999-333-4444"
+  
+  Then output your First-name_Last-name
+  
+  
+import os
+from google.cloud import storage
+from github import Github
+
+# set up Github credentials
+g = Github("<GITHUB_ACCESS_TOKEN>")
+repo = g.get_repo("<GITHUB_REPO_NAME>")
+
+# download the file from Github
+content = repo.get_contents("<EXERCISE_FILE_PATH>")
+file_content = content.decoded_content.decode('utf-8')
+
+# set up Google Cloud credentials
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "<GOOGLE_CREDENTIALS_FILE_PATH>"
+client = storage.Client("<PROJECT_NAME>")
+bucket = client.get_bucket("<BUCKET_NAME>")
+blob = bucket.blob("<DESTINATION_FILE_PATH>")
+
+# upload the file to Google Cloud Storage
+blob.upload_from_string(file_content)
+
+
+Instructions
+
+Replace the placeholders with the appropriate values:
+
+<GITHUB_ACCESS_TOKEN>: Your GitHub access token.
+<GITHUB_REPO_NAME>: The name of the repository that contains the exercise file you want to transfer.
+<EXERCISE_FILE_PATH>: The path of the exercise file you want to transfer within the repository.
+<GOOGLE_CREDENTIALS_FILE_PATH>: The path of the JSON file that contains your Google Cloud credentials.
+<PROJECT_NAME>: The name of the Google Cloud project you want to use.
+<BUCKET_NAME>: The name of the Google Cloud Storage bucket you want to use.
+<DESTINATION_FILE_PATH>: The path of the file you want to create in the Google Cloud Storage bucket.
+Make sure you have the necessary libraries installed (google-cloud-storage and PyGithub).
+
+
+
+
+
+
