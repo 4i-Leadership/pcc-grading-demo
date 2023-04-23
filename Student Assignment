@@ -1,3 +1,7 @@
+# Priliminary Step - link to go directly into this assignment
+
+
+
 # **"STUDENT ASSIGNMENT"**
 # *"Student is asked to write a simple function"*
   "Please output your own US-based mobile phone number in string, consisting of:"
@@ -6,5 +10,5 @@
       "3. A 4-digit number"
   "Example of a valid phone number string: 999-333-4444"
   
-  **"Then output your First-name_Last-name"**
+  **"Then output your First-name_Last-name.py"**
   
